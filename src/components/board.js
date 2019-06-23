@@ -14,13 +14,12 @@ export default class Board extends React.Component {
   renderBoard() {
     const size = 3;
     return Array(size).fill(null).map((_, row) => {
+      const elements = Array(size).fill(null).map((_, col) => {
+        return this.renderSquare(row * size + col);
+      })
       return (
         <div key={row} className="board-row">
-          {
-            Array(size).fill(null).map((_, col) => {
-              return (<>{this.renderSquare(row * size + col)}</>);
-            })
-          }
+          {elements}
         </div>
       );
     })
