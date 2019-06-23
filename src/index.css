@@ -52,3 +52,7 @@ ol, ul {
 .currentStep {
   font-weight: bold;
 }
+
+.highlighted {
+  background-color: skyblue;
+}
